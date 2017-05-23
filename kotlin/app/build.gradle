@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 25
@@ -38,4 +40,7 @@ dependencies {
     annotationProcessor "com.google.dagger:dagger-compiler:${dagger_version}"
     annotationProcessor "com.google.dagger:dagger-android-processor:${dagger_version}"
     provided 'javax.annotation:jsr250-api:1.0'
+    provided 'org.glassfish:javax.annotation:10.0-b28'
+    kapt "com.google.dagger:dagger-compiler:${dagger_version}"
+    kapt "com.google.dagger:dagger-android-processor:${dagger_version}"
 }
